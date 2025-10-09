@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SmokeSignal</title>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="script.js" type="module"></script>
+	</head>
+	<body>
+		<div class="flex-container flex">
+			<div id="slide-loading" class="flex flex-column column-container loading-ui-box">
+				<div class="loading-animation margin-auto"></div>
+			</div>
+			<div id="logged-in-container" class="flex flex-column flex-container hidden">
+				<h1 class="center-text">
+					SmokeSignal
+				</h1>
+				<div id="main-container" class="flex flex-row flex-container">
+					<div id="sidebar-container" class="flex flex-column">
+						<ul id="sidebar" class="flex flex-column">
+							<li id="new-conversation-container"><button id="new-conversation" class="button margin-auto medium-font">New Conversation</button></li>
+							<div id="conversations"></div>
+							<li id="profile" class="clickable margin-top-auto"><span class="li-text-content"></span></li>
+							<li id="logout" class="clickable"><span class="li-text-content">Log Out</span></li>
+						</ul>
+					</div>
+					<div id="message-container-container" class="flex flex-column">
+						<div id="message-container" class="flex flex-column">
+							<div id="messages" class="flex">
+								<div id="messages-load-more-anchor" class="flex"></div>
+								<div id="messages-anchor"></div>
+							</div>
+							<div id="message-composition-container" class="flex flex-column hidden">
+								<input id="recipient-input" type="text" width="120" placeholder="Recipient's user ID here" autocomplete="off" data-1p-ignore data-bwignore data-lpignore="true" data-form-type="other">
+								<input id="message-input" type="text" width="120" autocomplete="off">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mini-loader-container" class="hidden">
+			<span id="mini-loader-tooltip">Connection Lost. Waiting to Reestablish...</span>
+			<div id="mini-loader" class="loading-animation"></div>
+		</div>
+	</body>
+</html>

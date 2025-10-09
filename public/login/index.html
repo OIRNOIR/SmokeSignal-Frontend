@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SmokeSignal - Log In</title>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="script.js" type="module"></script>
+	</head>
+	<body>
+		<div class="flex-container flex flex-column">
+			<!--cspell: disable-next-line-->
+			<h1 class="center-text main-title">Log In to <span id="hostname">FRONT_HOSTNAME</span></h1>
+			<div class="login-ui-box flex flex-column">
+				<noscript class="flex flex-column center-text">
+					<h1>Me when Javascript isn't enabled</h1>
+					<p>If you're on a browser that's too old to support Javascript, please upgrade to a better one.</p>
+					<p>If you have Javascript disabled for privacy reasons, you can open the web inspector to verify that we don't, in fact, use trackers. This site is built on raw vanilla Javascript so you should be able to just look at the code with no issues.</p>
+					<p>If you're still not convinced to reenable Javascript, there is no possible way this site will work without it due to the encryption methods it uses, so you'll either have to enable Javascript or find another less privacy-focused site.</p>
+				</noscript>
+				<div id="slide-incompatible" class="slide flex flex-column center-text">
+					<h1>Your browser does not support web cryptography. Please upgrade.</h1>
+				</div>
+				<div id="slide-loading" class="slide flex flex-column column-container">
+					<div class="loading-animation margin-auto"></div>
+				</div>
+				<div id="slide-0" class="slide flex flex-row column-container outer-column-container">
+					<div class="login-column flex flex-column">
+						<h1 class="center-text section-title">Log In</h1>
+						<div class="flex flex-column column-container">
+							<label for="login-credentials" class="drop-container">
+								<span class="drop-title">Drop Your Auth File Here</span>
+								<input type="file" accept=".o-chat-auth" id="login-credentials">
+								<span class="drop-subtitle">Private keys will not leave this device</span>
+								<span class="error-message" id="login-error" hidden>Error</span>
+							</label>
+						</div>
+					</div>
+					<div class="login-column flex flex-column">
+						<h1 class="center-text section-title">Have an Invite Code?</h1>
+						<div class="flex flex-column column-container">
+							<div class="flex flex-column margin-auto row-gap">
+								<input type="text" autocomplete="off" id="invite-code" class="rounded-text-input" placeholder="Enter it here." size="20" minlength="5" maxlength="18">
+								<button id="create-account-button" class="button margin-auto" disabled>Create Account</button>
+								<div class="flex">
+									<span class="error-message margin-auto" id="invite-error" hidden>Error</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slide-1" class="slide signup-slide flex flex-column column-container">
+					<h1 class="center-text">Please Choose a Password</h1>
+					<div class="flex flex-column column-container">
+						<div class="flex flex-column margin-auto row-gap">
+							<p class="center-text">Please do not forget this password. Your account cannot be recovered if you forget your password.</p>
+							<div class="grid two-columns-grid margin-auto column-gap row-gap bottom-margin fit-content">
+								<label for="new-password-input" class="margin-auto">Password</label>
+								<input id="new-password-input" type="password" autocomplete="new-password" class="rounded-text-input" size="32" minlength="8">
+								<label for="new-password-confirm" class="margin-auto">Confirm Password</label>
+								<input id="new-password-confirm" type="password" autocomplete="new-password" class="rounded-text-input" size="32" minlength="8">
+							</div>
+							<div class="flex">
+								<button id="confirm-new-password-button" class="button margin-auto" disabled>Next</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slide-2" class="slide signup-slide flex flex-column column-container">
+					<div class="login-row">
+						<h1 class="center-text">Save your Auth File</h1>
+						<div class="flex">
+							<button id="save-auth-file-button" class="button margin-auto">Save Auth File</button>
+						</div>
+						<p class="center-text">Please save this file in a safe place. It will act as your account login, and you will drag and drop it into the login page to log in. If you close this page before your account is created, these credentials will no longer be valid and you will be able to use the same invite code to attempt account creation again.</p>
+						<h3 class="center-text">WARNING: Your Auth file contains sensitive cryptographic information required to log you in. DO NOT LOSE THIS FILE. We will not be able to recover your account if you do. In addition, DO NOT LET ANYONE OBTAIN THIS FILE. We cannot change your credentials.</h3>
+					</div>
+					<div class="login-row flex flex-column">
+						<label for="verify-credentials" class="drop-container">
+							<span class="drop-title">Drop Your Auth File Here to Continue</span>
+							<input type="file" accept=".o-chat-auth" id="verify-credentials">
+							<span class="drop-subtitle">Private keys will not leave this device</span>
+							<span class="error-message" id="login-error" hidden>Error</span>
+						</label>
+					</div>
+				</div>
+				<div id="slide-3" class="slide signup-slide flex flex-column column-container">
+					<h1 class="center-text">Select Username</h1>
+					<div class="flex flex-column column-container">
+						<div class="flex flex-column margin-auto row-gap">
+							<label for="username" class="center-text">Select your username</label>
+							<input type="text" autocomplete="off" id="username" class="rounded-text-input" placeholder="What should people call you?" size="32" minlength="1" maxlength="32">
+							<button id="confirm-account-details-button" class="button margin-auto" disabled>Create Account</button>
+						</div>
+					</div>
+				</div>
+				<div id="slide-4" class="slide login-slide flex flex-column column-container">
+					<h1 class="center-text">Please Enter your Password</h1>
+					<div class="flex flex-column column-container">
+						<div class="flex flex-column margin-auto row-gap">
+							<div class="grid two-columns-grid margin-auto column-gap row-gap bottom-margin fit-content">
+								<label for="password-input" class="margin-auto">Password</label>
+								<input id="password-input" type="password" autocomplete="current-password" class="rounded-text-input" size="32" minlength="8">
+							</div>
+							<div class="flex">
+								<button id="confirm-password-button" class="button margin-auto" disabled>Login</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
