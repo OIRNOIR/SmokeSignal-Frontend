@@ -17,3 +17,9 @@ I apologize for the limited portability of this code, as well as the lack of Typ
 would rewrite this in TS but don't currently have time for anything other than releasing the
 code mostly as-is. Commit history has been expunged to avoid exposing personally identifiable
 information.
+
+Open Source Checklist:
+- [ ] Verify that no PII is leaked here (if it is, remove it from the commit history)
+- [ ] Improve documentation
+- [ ] Pick a licence (GPLv3?)
+- [ ] Publish with Backend, link to that repo as well
