@@ -21,3 +21,7 @@ I apologize for the limited portability of this code, as well as the lack of Typ
 would rewrite this in TS but don't currently have time for anything other than releasing the
 code mostly as-is. Commit history has been expunged to avoid exposing personally identifiable
 information.
+
+If you would like a small demo image, I've attached a (quite badly) censored demo I made at the time.
+
+<img width="7168" height="4416" alt="Demo Image" src="https://github.com/user-attachments/assets/7d2c4a02-963d-4585-914b-2c0a79c7e3c6" />
