@@ -4,6 +4,9 @@ This is the frontend for a project I made in May-June 2024. It is an end-to-end 
 web-based chat application which uses the quantum-resistant cryptography algorithm
 CRYSTALS-Kyber for security.
 
+Please note that the implementation of CRYSTALS-Kyber this project depends on has since
+been deprecated in favor of ML-KEM. You may wish to not deploy this project.
+
 It isn't currently actively maintained, and hasn't been actively developed since I originally
 wrote it as closed source. If you're reading this, I've released the project as open source as
 of October 2025, mostly as an educational proof of concept, but also to showcase my experience.
@@ -21,5 +24,5 @@ information.
 Open Source Checklist:
 - [ ] Verify that no PII is leaked here (if it is, remove it from the commit history)
 - [ ] Improve documentation
-- [ ] Pick a licence (GPLv3?)
+- [ ] Pick a license (GPLv3?)
 - [ ] Publish with Backend, link to that repo as well

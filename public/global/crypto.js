@@ -1,4 +1,4 @@
-import * as kyber from "https://esm.sh/crystals-kyber-js";
+import * as kyber from "https://esm.sh/crystals-kyber-js@1.1.2";
 
 /**
  * @param {Uint8Array} array

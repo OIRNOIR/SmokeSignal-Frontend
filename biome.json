@@ -48,6 +48,6 @@
 		"indentWidth": 1
 	},
 	"files": {
-		"includes": ["**", "!/public/global/kyber1024.js"]
+		"includes": ["**"]
 	}
 }
