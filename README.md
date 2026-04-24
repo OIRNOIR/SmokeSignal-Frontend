@@ -12,7 +12,7 @@ wrote it as closed source. If you're reading this, I've released the project as 
 of October 2025, mostly as an educational proof of concept, but also to showcase my experience.
 
 This frontend requires a partner backend,
-located [here](https://https://github.com/OIRNOIR/SmokeSignal-Backend). Host that backend,
+located [here](https://git.oirnoir.dev/OIRNOIR/SmokeSignal-Backend). Host that backend,
 then replace all instances of `API_HOSTNAME` with your api's hostname and `FRONT_HOSTNAME` with
 your frontend's hostname in this codebase. Then, use Cloudflare Pages or some other static site
 host to serve the static content on your frontend hostname.
